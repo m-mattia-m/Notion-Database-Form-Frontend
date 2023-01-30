@@ -18,7 +18,7 @@ export const oidc = new UserManager({
   client_id: import.meta.env.VITE_OIDC_CLIENT_ID,
   client_secret: import.meta.env.VITE_OIDC_CLIENT_SECRET || undefined,
   redirect_uri: `${appUrl}auth/callback`,
-  scope: `openid profile email offline_access ${projectScopes}`,
+  scope: `openid profile email offline_access urn:zitadel:iam:org:project:role:user ${projectScopes}`,
   response_type: 'code',
   automaticSilentRenew: true,
   loadUserInfo: true,
